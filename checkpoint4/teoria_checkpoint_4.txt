@@ -1,0 +1,31 @@
+¿Cuál es la diferencia entre una lista y una tupla en Python?
+La principal diferencia entre una lista y una tupla es que la lista es mutable y la tupla es inmutable. Esto quiere decir que aunque ambas son colecciones de elementos. En las listas tú puedes añadir y quitar elementos y acceder a ellos por sus índices. Cosa que no puedes hacer sin más con una tupla. Habría que utilizar la reasignació
+
+¿Cuál es el orden de las operaciones?
+Please - Primero hay que realizar lo de dentro de los paréntesis ()
+Excuse - Segundo, los reducir los exponentes (**)
+My - Las multiplicaciones
+Dear- Divisiones (también se pueden hacer primero las divisiones y luego las multiplicaciones)
+Aunt - Ahora las sumas
+Sally - Y por último las restas
+
+¿Qué es un diccionario Python?
+Un diccionario es un almacén de datos clave, esto es un almacén de valores a los que les asigna unas claves para poder acceder y almacenarlos fácilmente.
+Utiliza lo que se llama pares clave valor (key-value pairs).
+Los diccionarios se escriben entre llaves {} y los pares de datos se separan por comas.
+los elementos claves y valores pueden ser de distinto tipo, string, int...
+Un ejemplo de diccionario podría ser:
+mi_diccionario= {
+	'a':1,
+	'b':2,
+	'c':3
+	}
+
+¿Cuál es la diferencia entre el método ordenado y la función de ordenación?
+Cuando utilizo el método de ordenación sort, lo que hacemos es cambiar la lista entera, no me guarda la lista ordenada en una nueva variable. Para hacer eso debería utilizar la función de ordenación sorted. Así no modificaré mi lista inicial.
+
+¿Qué es un operador de asignación? Es simplemente aquel que le asigna un valor a una variable. (x=5)
+Luego están los operadores de asignación compuestos que combinan la asignación con una operación matemática
+
+ej: (+=) x+=3 es lo mismo que decir x=x+3
+Y lo mismo se podría hacer con estos(-=),(*=),(**=)
