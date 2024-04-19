@@ -1,0 +1,126 @@
+ Documentación para Checkpoint 5 (Ainhoa Galán)
+ 
+ 
+ Exercise 1: ¿Qué es un condicional?
+ 
+ Para explicar qué es un condicional, primero hemos de saber que todo programa está formado por una serie de instrucciones que se ejecutan en forma secuencial de «arriba» a «abajo», (igual que si leyéramos un libro). Ese orden es lo que se llama el flujo del programa.
+	Ese flujo podemos modificarlo, bien para que se interrumpa o bien para que repita ciertas instrucciones... y ese control de flujo lo hacemos a través de una serie de sentencias. 
+	Un tipo de estas sentencias son las condicionales.  En definitiva un condicional es una sentencia que permite a un programa ejecutar código si se cumplen las condiciones.
+	Hay varios tipos de sentencias condicionales.
+	* if
+	* if-else
+	* if anidada
+	* if-elif-else
+
+Sentencia if
+Es la estructura de control de flujo más simple. Tiene asociada una condición y si se cumple se ejecuta la instrucción. 
+Sintaxis: Para escribirla basta con poner una comparación y terminarla con dos puntos. Aquí escribo un ejemplo:
+    temperatura= 40
+    if temperatura > 35:
+        print('Alerta por altas temperaturas')
+        
+    Alerta por altas temperaturas
+            
+
+Sentencia if-else
+
+Este tipo de sentencia se usa cuando se ejecutarán distintas instrucciones tanto si se cumple como si no se cumple la condición.En este caso el bloque if se ejecutará si la condición es verdadera y el bloque else si es falsa, como se puede ver en el siguiente ejemplo:
+
+
+    Temperaturas normalestemperatura = 20
+    if temperatura > 35:
+        print('Alerta por altas temperaturas')
+    else:
+        print('Temperaturas normales')
+
+
+Sentencia if anidada
+Este caso consiste en incorporar unas condiciones dentro de otras mediante la inclusión de indentaciones. Un ejemplo de ello sería:
+
+    edad = 45
+    if edad >= 18:
+        if edad >= 65:
+            print("Eres un adulto mayor")
+        else:
+            print("Eres un adulto")
+    else:
+        if edad < 18:
+            print("Eres menor de edad")
+
+Sentencia if(si)-elif(si no, si)-else (si no)
+
+    if compra <= 100:
+    print "Pago en efectivo"
+    elif compra > 100 and compra < 300:
+    print "Pago con tarjeta de débito"
+    else:
+    print "Pago con tarjeta de crédito"
+
+
+Exercise 2: ¿Cuáles son los diferentes tipos de bucles en Python? ¿Por qué son útiles?
+Los bucles son estructuras de control de flujo que nos permiten ejecutar un mismo código, de manera repetida, mientras
+se cumpla una condición. Existen dos tipos:
+• El bucle while
+El bucle while se utiliza para ejecutar un bloque de código repetidamente mientras se cumpla una condición.
+Es útil cuando el número de iteraciones no se conoce de antemano y depende de alguna condición que puede cambiar durante la ejecución del programa.
+Su sintaxis sería while (condition):expresion (block of code)
+Ejemplo de aplicación: El bucle while permite repetirse indefinidamente, siempre que la secuencia se mantenga como verdadera.
+
+• El bucle for
+Este bucle se usa para iterar sobre una serie de elementos, como listas, tuplas, diccionarios o rangos, y ejecuta un bloque de código, una vez para cada elemento en la serie.
+Es útil cuando el número de iteraciones lo conocemos o queremos recorrer una colección de elementos.
+
+Ambos tipos de bucles son muy útiles al programar ya que permiten automatizar tareas repetitivas y procesar datos de manera eficiente. Que utilicemos uno u otro dependerá de la situación específica y de si conocemos el número de iteraciones de antemano o no.
+
+Exercise 3: ¿Qué es una lista por comprensión en Python?
+ La lista por comprensión o comprensión de listas es una funcionalidad que nos permite crear listas avanzadas o más complejas en una única línea de código.
+Imaginemos que tenemos este código con el que vamos a crear una lista con los números pares de una serie, para lograrlo escribiríamos una función como la siguiente:
+    numeros = [1, 2, 27, 44, 32, 17, 25, 3400, 18]
+
+    pares = []
+    for num in numeros:
+        if num % 2 == 0:
+            pares.append(num)
+    print(pares) 
+
+Con una lista por compresión el código quedaría del siguiente modo:
+
+    pares = [num for num in numeros if num % 2 == 0]
+    print(pares)
+
+Así pues, la sintaxis de este tipo de funciones consistirá en definir entre corchetes una expresión seguida de un bucle for al que opcionalmente le pueden seguir otros bucles for y/o una condición.
+    [   expresion(i)   for i in list   if condición   ]
+
+
+
+Exercise 4: ¿Qué es un argumento en Python?
+En Python, un argumento es la información que se pasa a una función cuando se llama a esta.
+    Ejemplo: En def sumar(a, b):, a y b son argumentos.
+Los argumentos se utilizan para proporcionar datos a las funciones para que puedan ejecutar las instrucciones.
+En cuanto a su sintaxis, los argumentos se escriben dentro de los paréntesis en la definición de la función y para utilizarlos, al llamar a la función se proporcionan los valores correspondientes a los argumentos que solicita esa función.
+    sumar(3,4)
+
+Exercise 5: ¿Qué es una función Lambda en Python?
+Una función lambda es una manera compacta de escribir una función si se necesita una expresión corta. Es una herramienta que nos permite empaquetar una función, en general más reducida, y luego introducirla en otras funciones.
+Una lambda es algo muy similar a una variable que se puede introducir en vez de una cadena, un diccionario...Hacen que podamos tratar a una función como cualquier tipo de objeto, fácil de moverse.
+En el siguiente ejemplo podemos ver que la función lambda add toma dos argumentos x e y, y devuelve su suma. Podemos llamar a esta función como cualquier otra función, proporcionando los valores de x e y que se desean sumar. 
+Las funciones lambda son útiles para funciones simples y pequeñas que se pueden definir de manera concisa en una sola línea.
+#Definimos la función
+add = lambda x, y: x + y
+# Llamamos a la función lambda
+resultado = add(3, 5)
+print(resultado)  
+# Resultado: 8
+
+
+Exercise 6: ¿Qué es un paquete PIP?
+Pip es un sistema de gestión de paquetes utilizado para instalar y administrar bibliotecas y módulos de Python.
+Los paquetes Pip son fundamentales para ampliar las funcionalidades de Python mediante la incorporación de bibliotecas externas.
+Para instalar uno de estos módulos o paquetes externos, se haría con el comando
+    Ejemplo: 
+    pip install requests 
+    (en este ejemplo se instalará la biblioteca "requests" utilizando pip).
+
+Por lo tanto la sintaxis a utilizar será
+pip <comando> <paquete>
+
