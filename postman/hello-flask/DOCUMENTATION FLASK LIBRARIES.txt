@@ -1,0 +1,7 @@
+https://flask-sqlalchemy.palletsprojects.com/en/2.x/
+
+https://flask-marshmallow.readthedocs.io/en/latest/
+
+https://marshmallow-sqlalchemy.readthedocs.io/en/latest/
+
+DOCUMENTATION
