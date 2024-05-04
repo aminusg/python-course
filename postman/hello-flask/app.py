@@ -1,4 +1,4 @@
-from flask import Flask # type: ignore
+from flask import Flask, request, jsonify 
 from flask_sqlalchemy import SQLAlchemy # type: ignore
 from flask_marshmallow import Marshmallow # type: ignore
 import os
@@ -28,6 +28,22 @@ class GuideSchema(ma.Schema):
 
 guide_schema = GuideSchema()
 guides_schema = GuideSchema(many=True)
+
+#Endpoint to create a new guide
+
+@app.route('/guide', methods=["POST"]) #Ahora creamos un método y los valores (title y content)(necesitamos importar las librerías- request y jsonfy)
+def add_guide():
+    title = request.json['title']
+    content = request.json['content']
+#Ahora creamos una nueva variable
+    new_guide = Guide(title, content)
+#Ahora vamos a comunicarnos con la bbdd
+    db.session.add(new_guide)
+    db.session.commit() #commit es un method dentro de la biblioteca SQLAlchemy
+
+    guide = Guide.query.get(new_guide.id) #.query es una función dentro de la biblio SQLAlchemypip
+
+    return guide_schema.jsonify(guide)
 
 if __name__ == '__main__':
     app.run(debug=True)
